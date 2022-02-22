@@ -1,9 +1,10 @@
+require "../level1/base"
 require "./base"
 
 rental_prices = data["rentals"].map do |rental|
   {
     id: rental["id"],
-    price: rental_price(rental)
+    price: rental_price(rental).round
   }
 end
 
